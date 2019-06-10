@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		384D018722AEAD3F005947EC /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384D018622AEAD3F005947EC /* GradientLabel.swift */; };
+		384D018922AEB7BA005947EC /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384D018822AEB7BA005947EC /* GradientSlider.swift */; };
 		AF938CBF22A69E3B001AC4F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF938CBE22A69E3B001AC4F0 /* AppDelegate.swift */; };
 		AF938CC122A69E3B001AC4F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF938CC022A69E3B001AC4F0 /* ViewController.swift */; };
 		AF938CC422A69E3B001AC4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF938CC222A69E3B001AC4F0 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		384D018622AEAD3F005947EC /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		384D018822AEB7BA005947EC /* GradientSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
 		AF938CBB22A69E3B001AC4F0 /* GradientPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradientPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF938CBE22A69E3B001AC4F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF938CC022A69E3B001AC4F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				384D018622AEAD3F005947EC /* GradientLabel.swift */,
 				AF938CDE22A69EF3001AC4F0 /* GradientBarControl.swift */,
 				AF938CE422A9563F001AC4F0 /* GradientSwitch.swift */,
+				384D018822AEB7BA005947EC /* GradientSlider.swift */,
 			);
 			path = GradientPlayground;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				384D018722AEAD3F005947EC /* GradientLabel.swift in Sources */,
 				AF938CDF22A69EF3001AC4F0 /* GradientBarControl.swift in Sources */,
 				AF938CBF22A69E3B001AC4F0 /* AppDelegate.swift in Sources */,
+				384D018922AEB7BA005947EC /* GradientSlider.swift in Sources */,
 				AF938CE522A9563F001AC4F0 /* GradientSwitch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
