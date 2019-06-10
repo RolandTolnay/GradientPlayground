@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GradientPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24K-ch-bhb" customClass="GradientSlider" customModule="GradientPlayground" customModuleProvider="target">
+                                <rect key="frame" x="24" y="224" width="366" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="oyq-AC-Iw3"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RIf-zk-KTT">
+                                <rect key="frame" x="182.5" y="64" width="51" height="31"/>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQs-OW-vWX" customClass="GradientSwitch" customModule="GradientPlayground" customModuleProvider="target">
+                                <rect key="frame" x="60" y="645" width="82" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="2z2-ok-kDe"/>
+                                    <constraint firstAttribute="height" constant="50" id="Hkh-Uy-NKp"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dFX-UE-MpD">
+                                <rect key="frame" x="146.5" y="772" width="121" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w91-da-M8G">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                        <state key="normal" title="Set on"/>
+                                        <connections>
+                                            <action selector="onSetOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vDE-xo-Q2L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11x-sf-6pc">
+                                        <rect key="frame" x="75" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Set off"/>
+                                        <connections>
+                                            <action selector="onSetOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="04V-PE-hOr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bz-Ja-qjc">
+                                <rect key="frame" x="154.5" y="832" width="105" height="30"/>
+                                <state key="normal" title="Toggle enabled"/>
+                                <connections>
+                                    <action selector="onToggleEnabledTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SJ1-3d-Nxs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="24K-ch-bhb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="1BP-aN-4S9"/>
+                            <constraint firstItem="1Bz-Ja-qjc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1DD-bR-Ilj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="24K-ch-bhb" secondAttribute="trailing" constant="24" id="6nd-si-nzL"/>
+                            <constraint firstItem="1Bz-Ja-qjc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FmM-u0-t34"/>
+                            <constraint firstItem="RIf-zk-KTT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NTa-Bi-s7D"/>
+                            <constraint firstItem="24K-ch-bhb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="QiH-Sl-4pu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gQs-OW-vWX" secondAttribute="bottom" constant="167" id="Wpr-e4-aif"/>
+                            <constraint firstItem="RIf-zk-KTT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="egP-VB-pPh"/>
+                            <constraint firstItem="dFX-UE-MpD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lXx-FN-eiC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dFX-UE-MpD" secondAttribute="bottom" constant="60" id="sdb-zF-EbC"/>
+                            <constraint firstItem="gQs-OW-vWX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="uFZ-wS-wMA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classicSwitch" destination="RIf-zk-KTT" id="gIX-rD-9tl"/>
+                        <outlet property="slider" destination="24K-ch-bhb" id="wcO-Fz-aI8"/>
+                        <outlet property="switch" destination="gQs-OW-vWX" id="KA2-Fb-N69"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
