@@ -62,6 +62,12 @@
                                     <action selector="onToggleEnabledTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SJ1-3d-Nxs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCs-g2-PGx" customClass="GradientLabel" customModule="GradientPlayground" customModuleProvider="target">
+                                <rect key="frame" x="318.5" y="568.5" width="75.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -69,6 +75,7 @@
                             <constraint firstItem="1Bz-Ja-qjc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1DD-bR-Ilj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="24K-ch-bhb" secondAttribute="trailing" constant="24" id="6nd-si-nzL"/>
                             <constraint firstItem="1Bz-Ja-qjc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FmM-u0-t34"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oCs-g2-PGx" secondAttribute="bottom" constant="255" id="GcE-lO-ODx"/>
                             <constraint firstItem="RIf-zk-KTT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NTa-Bi-s7D"/>
                             <constraint firstItem="24K-ch-bhb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="QiH-Sl-4pu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gQs-OW-vWX" secondAttribute="bottom" constant="167" id="Wpr-e4-aif"/>
@@ -76,6 +83,7 @@
                             <constraint firstItem="dFX-UE-MpD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lXx-FN-eiC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dFX-UE-MpD" secondAttribute="bottom" constant="60" id="sdb-zF-EbC"/>
                             <constraint firstItem="gQs-OW-vWX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="uFZ-wS-wMA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oCs-g2-PGx" secondAttribute="trailing" constant="20" id="uGS-Mi-AD1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
