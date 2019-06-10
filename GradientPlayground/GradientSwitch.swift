@@ -46,9 +46,7 @@ class GradientSwitch: UIControl {
 
   override var isEnabled: Bool {
     didSet {
-      if isEnabled != oldValue {
-        animateOpacity(toIsEnabled: isEnabled)
-      }
+			layer.opacity = isEnabled ? 1.0 : GradientSwitch.disabledOpacity
     }
   }
 
@@ -272,20 +270,6 @@ class GradientSwitch: UIControl {
 
     gradientLayer.removeAnimation(forKey: "borderAnimations")
     gradientLayer.add(gradientGroup, forKey: "borderAnimations")
-  }
-
-  private func animateOpacity(toIsEnabled isEnabled: Bool) {
-
-    let opacityAnimation = baseAnimation(for: "opacity",
-                                         fromValue: isEnabled ? GradientSwitch.disabledOpacity : 1.0,
-                                         toValue: isEnabled ? 1.0 : GradientSwitch.disabledOpacity)
-
-    thumbLayer.removeAnimation(forKey: "opacityAnimation")
-    thumbLayer.add(opacityAnimation, forKey: "opacityAnimation")
-    gradientLayer.removeAnimation(forKey: "opacityAnimation")
-    gradientLayer.add(opacityAnimation, forKey: "opacityAnimation")
-    activityIndicator.layer.add(opacityAnimation, forKey: "opacityAnimation")
-    activityIndicator.layer.add(opacityAnimation, forKey: "opacityAnimation")
   }
 
   private func baseAnimation(for keyPath: String,

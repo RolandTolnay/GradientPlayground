@@ -13,7 +13,7 @@
 		AF938CC422A69E3B001AC4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF938CC222A69E3B001AC4F0 /* Main.storyboard */; };
 		AF938CC622A69E3D001AC4F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF938CC522A69E3D001AC4F0 /* Assets.xcassets */; };
 		AF938CC922A69E3D001AC4F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF938CC722A69E3D001AC4F0 /* LaunchScreen.storyboard */; };
-		AF938CDF22A69EF3001AC4F0 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF938CDE22A69EF3001AC4F0 /* GradientSlider.swift */; };
+		AF938CDF22A69EF3001AC4F0 /* GradientBarControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF938CDE22A69EF3001AC4F0 /* GradientBarControl.swift */; };
 		AF938CE522A9563F001AC4F0 /* GradientSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF938CE422A9563F001AC4F0 /* GradientSwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		AF938CC522A69E3D001AC4F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF938CC822A69E3D001AC4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF938CCA22A69E3D001AC4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF938CDE22A69EF3001AC4F0 /* GradientSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
+		AF938CDE22A69EF3001AC4F0 /* GradientBarControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBarControl.swift; sourceTree = "<group>"; };
 		AF938CE422A9563F001AC4F0 /* GradientSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,12 +62,12 @@
 			children = (
 				AF938CBE22A69E3B001AC4F0 /* AppDelegate.swift */,
 				AF938CC022A69E3B001AC4F0 /* ViewController.swift */,
-				384D018622AEAD3F005947EC /* GradientLabel.swift */,
 				AF938CC222A69E3B001AC4F0 /* Main.storyboard */,
 				AF938CC522A69E3D001AC4F0 /* Assets.xcassets */,
 				AF938CC722A69E3D001AC4F0 /* LaunchScreen.storyboard */,
 				AF938CCA22A69E3D001AC4F0 /* Info.plist */,
-				AF938CDE22A69EF3001AC4F0 /* GradientSlider.swift */,
+				384D018622AEAD3F005947EC /* GradientLabel.swift */,
+				AF938CDE22A69EF3001AC4F0 /* GradientBarControl.swift */,
 				AF938CE422A9563F001AC4F0 /* GradientSwitch.swift */,
 			);
 			path = GradientPlayground;
@@ -146,7 +146,7 @@
 			files = (
 				AF938CC122A69E3B001AC4F0 /* ViewController.swift in Sources */,
 				384D018722AEAD3F005947EC /* GradientLabel.swift in Sources */,
-				AF938CDF22A69EF3001AC4F0 /* GradientSlider.swift in Sources */,
+				AF938CDF22A69EF3001AC4F0 /* GradientBarControl.swift in Sources */,
 				AF938CBF22A69E3B001AC4F0 /* AppDelegate.swift in Sources */,
 				AF938CE522A9563F001AC4F0 /* GradientSwitch.swift in Sources */,
 			);

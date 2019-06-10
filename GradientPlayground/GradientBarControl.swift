@@ -1,5 +1,5 @@
 //
-//  GradientSlider.swift
+//  GradientBarControl.swift
 //  GradientPlayground
 //
 //  Created by Roland Tolnay on 04/06/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradientSlider: UIView {
+class GradientBarControl: UIView {
 
   static let maxValue: Double = 100
   static let minValue: Double = 0
@@ -18,30 +18,24 @@ class GradientSlider: UIView {
   @IBInspectable
   var value: Double = 100 {
     didSet {
-      value = value.clamped(to: GradientSlider.minValue...GradientSlider.maxValue)
+      value = value.clamped(to: GradientBarControl.minValue...GradientBarControl.maxValue)
       setNeedsDisplay()
     }
   }
 
   @IBInspectable
   var startColor: UIColor = #colorLiteral(red: 1, green: 0.8235294118, blue: 0.137254902, alpha: 1) {
-    didSet {
-      setNeedsDisplay()
-    }
+    didSet { setNeedsDisplay() }
   }
 
   @IBInspectable
   var endColor: UIColor = #colorLiteral(red: 1, green: 0.1960784314, blue: 0.7450980392, alpha: 1) {
-    didSet {
-      setNeedsDisplay()
-    }
+    didSet { setNeedsDisplay() }
   }
 
   @IBInspectable
   var shadowColor: UIColor = #colorLiteral(red: 1, green: 0.2901960784, blue: 0.1960784314, alpha: 1) {
-    didSet {
-      setNeedsDisplay()
-    }
+    didSet { setNeedsDisplay() }
   }
 
   override func awakeFromNib() {
@@ -80,7 +74,7 @@ class GradientSlider: UIView {
       else { return }
 
     let cornerRadius = rect.height / 2
-    let levelNormalizedWidth = CGFloat((value / GradientSlider.maxValue)) * rect.width
+    let levelNormalizedWidth = CGFloat((value / GradientBarControl.maxValue)) * rect.width
 
     gradientPath = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)
     backgroundPath = UIBezierPath(roundedRect: rect.offsetBy(dx: levelNormalizedWidth,
@@ -126,7 +120,7 @@ class GradientSlider: UIView {
 
     guard let firstTouch = touches.first else { return }
     let point = firstTouch.location(in: self)
-    value = GradientSlider.maxValue * Double(point.x/bounds.width)
+    value = GradientBarControl.maxValue * Double(point.x/bounds.width)
   }
 
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

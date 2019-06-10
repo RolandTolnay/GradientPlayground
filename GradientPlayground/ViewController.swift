@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var classicSwitch: UISwitch!
   @IBOutlet weak var `switch`: GradientSwitch!
-  @IBOutlet weak var slider: GradientSlider!
+  @IBOutlet weak var slider: GradientBarControl!
 
   override func viewDidLoad() {
     super.viewDidLoad()
