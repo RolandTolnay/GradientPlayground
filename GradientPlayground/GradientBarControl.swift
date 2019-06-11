@@ -13,7 +13,10 @@ class GradientBarControl: UIView {
   static let maxValue: Double = 100
   static let minValue: Double = 0
 
+  /// Called every time the value changes
   var onValueChanged: ((_ value: Double) -> Void)?
+  /// Called once the user finishes moving the slider
+  var onValueSubmitted: ((_ value: Double) -> Void)?
 
   @IBInspectable
   var value: Double = 100 {
@@ -74,10 +77,10 @@ class GradientBarControl: UIView {
       else { return }
 
     let cornerRadius = rect.height / 2
-    let levelNormalizedWidth = CGFloat((value / GradientBarControl.maxValue)) * rect.width
+    let valueNormalizedWidth = CGFloat((value / GradientBarControl.maxValue)) * rect.width
 
     gradientPath = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)
-    backgroundPath = UIBezierPath(roundedRect: rect.offsetBy(dx: levelNormalizedWidth,
+    backgroundPath = UIBezierPath(roundedRect: rect.offsetBy(dx: valueNormalizedWidth,
                                                              dy: 0),
                                   byRoundingCorners: [.topRight, .bottomRight],
                                   cornerRadii: CGSize(width: cornerRadius,
@@ -101,7 +104,7 @@ class GradientBarControl: UIView {
     layer.shadowRadius = 12.0
     layer.shadowOpacity = 0.3
     layer.shadowPath = UIBezierPath(roundedRect: CGRect(origin: CGPoint.zero,
-                                                        size: CGSize(width: levelNormalizedWidth,
+                                                        size: CGSize(width: valueNormalizedWidth,
                                                                      height: rect.height)),
                                     cornerRadius: cornerRadius).cgPath
   }
@@ -121,11 +124,12 @@ class GradientBarControl: UIView {
     guard let firstTouch = touches.first else { return }
     let point = firstTouch.location(in: self)
     value = GradientBarControl.maxValue * Double(point.x/bounds.width)
+    onValueChanged?(value)
   }
 
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-    onValueChanged?(value)
+    onValueSubmitted?(value)
   }
 }
 
