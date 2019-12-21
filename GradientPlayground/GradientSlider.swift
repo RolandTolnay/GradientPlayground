@@ -36,8 +36,12 @@ class GradientSlider: UIControl {
 	var endColor: UIColor = #colorLiteral(red: 1, green: 0.8235294118, blue: 0.137254902, alpha: 1) {
 		didSet { setup() }
 	}
-	
-  private let thumbDiameter: CGFloat = 30.0
+
+  @IBInspectable
+  var thumbDiameter: CGFloat = 30.0 {
+    didSet { setup() }
+  }
+
   private let sliderHeight: CGFloat = 2.0
 	
 	override func awakeFromNib() {
@@ -49,6 +53,11 @@ class GradientSlider: UIControl {
 		super.prepareForInterfaceBuilder()
 		setup()
 	}
+
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    setup()
+  }
 
   private var isHoldingThumb = false
 

@@ -74,6 +74,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="JZR-hR-gdX"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thumbDiameter">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ghC-A2-0gv">
                                 <rect key="frame" x="22" y="352" width="370" height="31"/>
@@ -105,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="classicSwitch" destination="RIf-zk-KTT" id="gIX-rD-9tl"/>
+                        <outlet property="gradientSlider" destination="GoZ-a2-cDA" id="w0G-os-j48"/>
                         <outlet property="slider" destination="24K-ch-bhb" id="wcO-Fz-aI8"/>
                         <outlet property="switch" destination="gQs-OW-vWX" id="KA2-Fb-N69"/>
                     </connections>

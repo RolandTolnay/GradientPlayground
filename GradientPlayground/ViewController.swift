@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var classicSwitch: UISwitch!
   @IBOutlet weak var `switch`: GradientSwitch!
   @IBOutlet weak var slider: GradientBarControl!
+  @IBOutlet weak var gradientSlider: GradientSlider!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,16 +27,28 @@ class ViewController: UIViewController {
 
       print("Attempted to switch \(isOn)")
     }
+
+    gradientSlider.onValueChanged = { value in
+
+      print("Slider value changes \(value)")
+    }
+
+    gradientSlider.onValueSubmitted = { value in
+
+      print("Slider value submitted \(value)")
+    }
   }
 	@IBAction func onSetOn(_ sender: Any) {
 		
 		`switch`.setOn(true)
     classicSwitch.setOn(true, animated: true)
+    gradientSlider.value = 100
 	}
 	@IBAction func onSetOff(_ sender: Any) {
 		
 		`switch`.setOn(false)
     classicSwitch.setOn(false, animated: true)
+    gradientSlider.value = 0
 	}
 
   @IBAction func onToggleEnabledTap(_ sender: Any) {
